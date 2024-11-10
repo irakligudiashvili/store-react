@@ -1,4 +1,4 @@
-const Category = () => {
+function Category(){
     return (
         <h1>
             Category Page
@@ -6,4 +6,4 @@ const Category = () => {
     )
 }
 
-export default Category
+export default Category;

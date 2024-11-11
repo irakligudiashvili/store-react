@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Header(){
+    let phoneBrands = ['Apple', 'Samsung', 'Pixel'];
+
     return (
         <div className="header">
             <Link to='/'>
@@ -12,15 +14,11 @@ function Header(){
 
             <nav>
                 <ul>
-                    <li>
-                        <Link to='#'>Computers</Link>
-                    </li>
-                    <li>
-                        <Link to='#'>Displays</Link>
-                    </li>
-                    <li>
-                        <Link to='#'>Phones</Link>
-                    </li>
+                    {phoneBrands.map((brand) => (
+                        <li key={brand}>
+                            <Link to={`/${brand.toLowerCase()}`}>{brand}</Link>
+                        </li>
+                    ))}
                     <li>
                         <Link to='cart' id='cart'>
                             <FontAwesomeIcon icon={faCartShopping} />

@@ -1,14 +1,10 @@
-import './App.css'
-import Header from './components/partials/header/Header'
-import Homepage from './components/homepage/Homepage'
+import HomePage from './pages/HomePage'
+import './styles/App.css'
 
 function App() {
 
   return (
-    <div className='body'>
-      <Header />
-      <Homepage />
-    </div>
+    <HomePage />
   )
 }
 

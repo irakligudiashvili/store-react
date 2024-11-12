@@ -13,7 +13,7 @@ function ProductCard({ product, addToCart }){
 
     return (
         <div>
-            <img src={product.image} />
+            <img src={product.image} style={{width: "150px"}} />
             <h2>{product.title}</h2>
             <p>${product.price.toFixed(2)}</p>
             <div>

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import ShopPage from './pages/ShopPage'
 import { CartProvider } from './context/CartContext'
+import CartPage from './pages/CartPage'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route index element={<HomePage />} />
             <Route path="/shop" element={<ShopPage />} />
+            <Route path="/cart" element={<CartPage />} />
           </Routes>
         </main>
       </Router>

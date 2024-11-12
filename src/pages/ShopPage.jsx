@@ -7,10 +7,10 @@ function ShopPage(){
     const { addToCart } = useCart();
 
     useEffect(() => {
-        fetch('https://fakestopreapi.com/products')
+        fetch('https://fakestoreapi.com/products')
         .then((response) => response.json())
         .then((data) => setProducts(data))
-        .catch((error) = console.error('Error: ', error));
+        .catch((error) => console.error("Error fetching products:", error));
     }, []);
 
     return (

@@ -9,7 +9,7 @@ function Navbar(){
             <h1>Phone Store</h1>
             <div>
                 <Link to='/'>Home</Link>
-                <Link to='/shop'></Link>
+                <Link to='/shop'>Shop</Link>
             </div>
             <div>
                 <Link to='/cart'>Cart {getCartItemCount()}</Link>

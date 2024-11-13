@@ -1,8 +1,15 @@
+import { Outlet } from 'react-router-dom';
+import Header from './partials/Header';
+import Footer from './partials/Footer';
 import './App.css'
 
 function App() {
   return (
-    <h1>App</h1>
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
   );
 }
 

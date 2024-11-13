@@ -5,8 +5,10 @@
     align-items: center;
 
     background-color: #2DD3DF;
-    padding: 0 40px;
+    padding: 0 50px;
     height: 100px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .header__logo img{

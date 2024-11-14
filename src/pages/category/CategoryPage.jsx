@@ -3,7 +3,7 @@ import Products from "../../components/Products";
 
 function CategoryPage(){
     const { name } = useParams();
-    const validCategories = ['men', 'women', 'jewelery', 'eletronics'];
+    const validCategories = ['men', 'women', 'jewelery', 'electronics'];
 
     if(!validCategories.includes(name)){
         return <p>Category Not Found</p>

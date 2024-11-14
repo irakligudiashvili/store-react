@@ -8,7 +8,7 @@ function Products({ productType }){
     const categoryMap = {
         men: "men's clothing",
         women: "women's clothing",
-        jewelry: "jewelery",
+        jewelery: "jewelery",
         electronics: "electronics",
         all: null,
     }

@@ -5,7 +5,7 @@ function Header(){
     return (
         <nav className='header__nav'>
             <Link to='/' className='header__logo'>
-                <img src="src/assets/logo.png"/>
+                <img src="/src/assets/logo.png"/>
             </Link>
             <ul className='header__menu'>
                 <li className='header__item'><Link to='/category/men'>Men's Clothing</Link></li>

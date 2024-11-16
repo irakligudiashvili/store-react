@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { useCart } from "../contexts/CartProvider";
 
 function Products({ productType }){
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    const { addItemToCart } = useCart();
 
     const categoryMap = {
         men: "men's clothing",
@@ -41,10 +44,10 @@ function Products({ productType }){
         <div>
             {products.map(product => (
                 <div key={product.id}>
-                    <img src={product.image} />
+                    <img src={product.image} style={{width: "200px"}} />
                     <h2>{product.title}</h2>
                     <p>${product.price.toFixed(2)}</p>
-                    <button>Add To Cart</button>
+                    <button onClick={() => addItemToCart(product)}>Add To Cart</button>
                 </div>
             ))}
         </div>

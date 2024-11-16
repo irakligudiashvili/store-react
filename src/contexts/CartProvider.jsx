@@ -29,8 +29,47 @@ export function CartProvider({ children }){
         })
     }
 
+    const removeItem = (productId) => {
+        setCartItems(prevItems => prevItems.filter(item => item.id !== productId)) // leaves items that do not match the id
+    }
+
+    const adjustCount = (productId, operationType) => {
+        setCartItems(prevItems => {
+            return prevItems.map(item => {
+                if(item.id === productId){
+                    if(operationType === 'increase'){
+                        return {...item, quantity: item.quantity + 1};
+                    } else if (operationType === 'decrease'){
+                        if(item.quantity > 1){
+                            return {...item, quantity: item.quantity - 1};
+                        } else {
+                            return {...item, quantity: 1};
+                        }
+                    }
+                }
+                return item;
+            });
+        })
+    }
+
+    const getProductTotalPrice = (productId) => {
+        const product = cartItems.find(item => item.id === productId);
+        
+        return (product.price * product.quantity).toFixed(2);
+    }
+
+    const getTotalPrice = () => {
+        return cartItems.reduce((total, item) => {
+            return total + item.price * item.quantity;
+        }, 0).toFixed(2);
+    }
+
+    const getTotalItemCount = () => {
+        return cartItems.length;
+    }
+
     return (
-        <CartContext.Provider value={{cartItems, addItemToCart}}>
+        <CartContext.Provider value={{cartItems, addItemToCart, removeItem, adjustCount, getProductTotalPrice, getTotalPrice, getTotalItemCount}}>
             {children}
         </CartContext.Provider>
     )

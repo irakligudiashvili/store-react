@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useCart } from "../contexts/CartProvider";
+import './products.css';
 
-function Products({ productType }){
+function Products({ productType, productCount }){
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -25,7 +26,9 @@ function Products({ productType }){
 
                 const filteredData = productType === "all" ? data : data.filter(product => product.category === categoryMap[productType]);
 
-                setProducts(filteredData);
+                const limitedData = productCount ? filteredData.slice(0, productCount) : filteredData;
+                
+                setProducts(limitedData);
             } catch (error) {
                 console.error("Error: ", error);
             } finally {
@@ -41,13 +44,13 @@ function Products({ productType }){
     }
 
     return (
-        <div>
+        <div className="products__container">
             {products.map(product => (
-                <div key={product.id}>
-                    <img src={product.image} style={{width: "200px"}} />
-                    <h2>{product.title}</h2>
-                    <p>${product.price.toFixed(2)}</p>
-                    <button onClick={() => addItemToCart(product)}>Add To Cart</button>
+                <div key={product.id} className="product__wrapper">
+                    <img src={product.image} style={{width: "200px"}} className="product__img" />
+                    <h2 className="product__title">{product.title}</h2>
+                    <p className="product__price">${product.price.toFixed(2)}</p>
+                    <button onClick={() => addItemToCart(product)} className="product__btn">Add To Cart</button>
                 </div>
             ))}
         </div>

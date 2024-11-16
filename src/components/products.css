@@ -1,0 +1,9 @@
+.products__container{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.product__img{
+    width: 200px;
+}

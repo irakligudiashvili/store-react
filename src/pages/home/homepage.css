@@ -1,6 +1,27 @@
+.home{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
 .home__hero{
-    max-width: 100vw;
+    width: 100%;
     height: 500px;
 
-    background-image: url('src/assets/homepage/header.png');
+    background-image: url('src/assets/homepage/background.png');
+    background-position: center;
+}
+
+.home__section{
+    width: 85%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__section h2{
+    width: 100%;
 }

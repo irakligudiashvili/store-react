@@ -3,6 +3,7 @@
     flex-direction: column;
 
     align-items: center;
+    width: 100%;
 }
 
 .home__hero{
@@ -11,6 +12,15 @@
 
     background-image: url('src/assets/homepage/background.png');
     background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home__hero-title{
+    width: 100%;
 }
 
 .home__section{
@@ -24,4 +34,17 @@
 
 .home__section h2{
     width: 100%;
+}
+
+.section__title-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.section__title-container a{
+    width: 100%;
+    text-align: right;
 }

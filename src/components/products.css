@@ -10,6 +10,7 @@
 }
 
 .product__wrapper{
+    background-color: #fff;
     display: grid;
     grid-template-rows: 250px 110px 50px 80px;
 
@@ -43,4 +44,5 @@
 .product__btn{
     width: 95%;
     height: 50px;
+    cursor: pointer;
 }

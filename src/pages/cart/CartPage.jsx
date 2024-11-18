@@ -45,8 +45,7 @@ function CartPage(){
                             {cartItems.map(item => (
                                 <li key={item.id} className="checkout__summary-item">
                                     <div>
-                                        <p className="checkout__summary-item-title">{item.title}</p>
-                                        <p className="checkout__summary-item-quantity">x{item.quantity}</p>
+                                        <p className="checkout__summary-item-title">{item.title} <span className="checkout__summary-item-quantity">x{item.quantity}</span></p>
                                     </div>
                                     <p className="checkout__summary-item-price">${getProductTotalPrice(item.id)}</p>
                                 </li>

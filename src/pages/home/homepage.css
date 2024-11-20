@@ -8,10 +8,12 @@
 
 .home__hero{
     width: 100%;
-    height: 500px;
+    height: 600px;
 
-    background-image: url('src/assets/homepage/background.png');
+    /* background-image: url('src/assets/homepage/background.jpg'); */
     background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 
     display: flex;
     align-items: center;
@@ -19,12 +21,18 @@
     text-align: center;
 }
 
+.home__hero-img{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+}
+
 .home__hero-title{
     width: 100%;
 }
 
 .home__section{
-    width: 85%;
+    width: 90%;
     margin: 0;
 
     display: flex;
@@ -47,4 +55,10 @@
 .section__title-container a{
     width: 100%;
     text-align: right;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1200px){
+    
 }

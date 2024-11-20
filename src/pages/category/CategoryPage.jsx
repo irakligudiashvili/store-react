@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import Products from "../../components/Products";
+import './category.css';
 
 function CategoryPage(){
     const { name } = useParams();
@@ -10,7 +11,7 @@ function CategoryPage(){
     }
 
     return (
-        <div>
+        <div className="products-page">
             <Products productType={name} />
         </div>
     )

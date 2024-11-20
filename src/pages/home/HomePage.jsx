@@ -5,10 +5,10 @@ import './homepage.css'
 function HomePage(){
     return (
         <div className='home'>
-            <div className='home__hero'> 
+            {/* <div className='home__hero'> 
                 <h1 className='home__hero-title'>Fake Store</h1>
-                <img />
-            </div>
+                <img className='home__hero-img' src='/src/assets/homepage/background.jpg'/>
+            </div> */}
             <div className='home__section'>
                 <div className='section__title-container'>
                     <h2>Men's Clothing</h2>

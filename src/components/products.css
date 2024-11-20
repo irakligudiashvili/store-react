@@ -1,6 +1,5 @@
 .products__container{
     display: flex;
-    justify-content: start;
     gap: 2.5%;
     width: 90%;
     gap: auto;
@@ -13,12 +12,12 @@
     background-color: #fff;
     display: grid;
     grid-template-rows: 250px 110px 50px 80px;
-
+    
     width: max(200px, 23%);
-
+    
     box-shadow: 0 0 10px 2px rgb(114, 112, 112);
     border-radius: 10px;
-
+    
     box-sizing: border-box;
     padding: 10px;
     margin: 15px 0;
@@ -45,4 +44,28 @@
     width: 95%;
     height: 50px;
     cursor: pointer;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1200px){
+    .product__wrapper{
+        width: max(200px, 30%);
+    }
+}
+
+/* 900 */
+
+@media screen and (max-width: 900px){
+    .product__wrapper{
+        width: max(200px, 45%);
+    }
+}
+
+/* 600 */
+
+@media screen and (max-width: 600px){
+    .product__wrapper{
+        width: max(100%);
+    }
 }

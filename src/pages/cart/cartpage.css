@@ -8,6 +8,7 @@
     justify-content: space-between;
     margin: auto;
     gap: 30px;
+    margin-bottom: 30px;
 }
 
 .checkout__cart{
@@ -40,7 +41,7 @@
 .checkout__cart-item-img{
     max-width: 150px;
     max-height: 200px;
-    height: 100%;
+    margin: auto;
 }
 
 .checkout__cart-item-btn{

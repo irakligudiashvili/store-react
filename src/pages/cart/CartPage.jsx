@@ -5,7 +5,7 @@ import './cartpage.css';
 function CartPage(){
     const { cartItems } = useCart();
 
-    const { removeItem, adjustCount, getProductTotalPrice, getTotalPrice } = useCart();
+    const { removeItem, adjustCount, getProductTotalPrice, getTotalPrice, emptyCart } = useCart();
 
     return (
         <div className="cart-page">
@@ -56,7 +56,7 @@ function CartPage(){
                                 <p className="checkout__summary-tota-text">Total:</p>
                                 <p className="checkout__summary-total-price">${getTotalPrice()}</p>
                             </div>
-                            <button className="checkout__summary-btn">Checkout</button>
+                            <button className="checkout__summary-btn" onClick={() => emptyCart()}>Checkout</button>
                         </div>
                     </div>
                 </div>

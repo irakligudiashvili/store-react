@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+.cart-page__heading{
+    padding: 20px 0;
+}
+
 .checkout{
     width: 80%;
     display: flex;
@@ -124,4 +128,30 @@
     border-style: solid;
     font-size: 1.15rem;
     padding-top: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .checkout{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .checkout__summary{
+        width: 100%;
+        min-height: 250px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .checkout__cart-item{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .checkout__cart-actions{
+        margin-top: 10px;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
 }

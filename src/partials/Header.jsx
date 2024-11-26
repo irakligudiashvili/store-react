@@ -27,7 +27,7 @@ function Header(){
     return (
         <nav className='header__nav'>
             <Link to='/' className='header__logo'>
-                <img src="/assets/logo.png"/>
+                <img src="public/assets/logo.png"/>
             </Link>
             <ul className={`header__menu ${menuOpen ? 'header__menu-open' : ''}`}>
                 <li className='header__item' onClick={closeMenu}><Link to='/category/men'>Men's Clothing</Link></li>
